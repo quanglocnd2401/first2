@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>WEB BAN HANG</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+    />
+    <script src="index.js"></script>
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+      integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <i
+          style="color: orange"
+          class="icon1 fa-sharp fa-solid fa-cart-shopping"
+        >
+          SHOP GENSHIN</i
+        >
+        <div class="input">
+          <input
+            type="text"
+            placeholder="Nhập link hoặc tên sản phẩm bạn cần mua"
+          />
+          <i class="icon2 fa-solid fa-magnifying-glass"></i>
+        </div>
+     
+      </div>
+      <div class="menu">
+        <ul class="root">
+          <li><a href="#">TRANG CHỦ</a></li>
+          <li><a href="#">HÀNG CÓ SẴN</a></li>
+          <li>
+            <a href="#">ANIME/MANGA</a>
+            <ul class="submenu">
+              <li><a href="#">Dragon ball</a></li>
+              <li><a href="#">Naruto</a></li>
+              <li><a href="#">One Piece</a></li>
+              <li><a href="#">Pokemon</a></li>
+            </ul>
+          </li>
+          <li><a href="#">LIÊN HỆ</a></li>
+          <li><a href="#">CHỈ DẪN MUA HÀNG</a></li>
+          <li><a  onclick="checkLogin()" href="#">ĐĂNG NHẬP</a></li>
+        </ul>
+      </div>
+      <div class="sanphams">
+        <div class="sanphams-1">
+          <i id="pre" onclick="pre()" class="fa-solid fa-angle-left"></i>
+          <img
+            class="sanpham-parent"
+            id="sanpham-parent"
+            src="./img/kokomi.png"
+          />
+          <i id="next" onclick="next()" class="fa-solid fa-angle-right"></i>
+        </div>
+        <div class="selects">
+          <div class="sanpham-child" id="sanpham-child"></div>
+        </div>
+        <br />
+        <hr />
+        <br />
+        <br />
+      </div>
+    </div>
+    <div class="sale">
+      <p>Flash Sale: <span id="countdown"></span></p>
+    </div>
+
+    <div id="login-modal">
+      <div class="modal-content">
+        <span class="close" onclick="closeLogin()">&times;</span>
+        <form>
+          <label for="username">Username:</label>
+          <input onblur="check1()" type="text" id="username" 
+          name="username" /> <br /><br /> 
+          <label for="password">Password:</label>
+          <input type="password" id="password" name="password" /><br /><br />
+          <button type="button" onclick="login()">Login</button>
+        </form>
+      </div>
+    </div>
+
+    <div class="container2">
+      <div class="product">
+        <img
+          src="https://sapo.dktcdn.net/100/441/564/variants/gind01-1667124966285.jpg"
+          alt="Product 1"
+        />
+        <div class="product-name">Product 1</div>
+        <div class="product-price">$10.00</div>
+        <button
+          class="add-to-cart btn btn-primary"
+          data-name="Product 1"
+          data-price="10.00"
+          onclick="checkLogin()"
+        >
+          Thêm vào giỏ hàng
+        </button>
+      </div>
+
+      <div class="product">
+        <img
+          src="https://vn-live-01.slatic.net/p/a63ca415e31dbaf90b3131a9ca16c5c5.jpg"
+          alt="Product 2"
+        />
+        <div class="product-name">Product 2</div>
+        <div class="product-price">$15.00</div>
+        <button
+          class="add-to-cart btn btn-primary"
+          data-name="Product 2"
+          data-price="15.00"
+          onclick="checkLogin()"
+        >
+          Thêm vào giỏ hàng
+        </button>
+      </div>
+
+      <div class="product">
+        <img
+          src="https://bizweb.dktcdn.net/thumb/1024x1024/100/387/684/products/04-copy-result-b57ab9c8-6bbd-43df-be6e-fd2ab6b54390.jpg?v=1635343404900"
+          alt="Product 3"
+        />
+        <div class="product-name">Product 3</div>
+        <div class="product-price">$20.00</div>
+        <button
+          class="add-to-cart btn btn-primary"
+          data-name="Product 3"
+          data-price="20.00"
+          onclick="checkLogin()"
+        >
+          Thêm vào giỏ hàng
+        </button>
+      </div>
+
+      <div class="product">
+        <img
+          src="https://lzd-img-global.slatic.net/g/shop/2b25fc9f0af82480dc8db5bbf633b334.png_1200x1200q80.png_.webp"
+          alt="Product 4"
+        />
+        <div class="product-name">Product 4</div>
+        <div class="product-price">$30.00</div>
+        <button
+          class="add-to-cart btn btn-primary"
+          data-name="Product 4"
+          data-price="30.00"
+          onclick="checkLogin()"
+        >
+          Thêm vào giỏ hàng
+        </button>
+      </div>
+
+      <div class="product">
+        <img
+          src="https://otakustore.vn/image/cache/catalog/2021/03/mihoyo-x-apex-genshin-impact-klee-spark-knight-ver-1-7-scale-figure-3-750x750.jpg"
+          alt="Product 5"
+        />
+        <div class="product-name">Product 5</div>
+        <div class="product-price">$25.00</div>
+        <button
+          class="add-to-cart btn btn-primary"
+          data-name="Product 5"
+          data-price="25.00"
+          onclick="checkLogin()"
+        >
+          Thêm vào giỏ hàng
+        </button>
+      </div>
+
+      <div class="product">
+        <img
+          src="https://beegaming.com.vn/wp-content/uploads/2022/09/z3717618730313_11ab5e1de2e721dd216b6a090d39d244.jpg"
+          alt="Product 6"
+        />
+        <div class="product-name">Product 6</div>
+        <div class="product-price">$5.00</div>
+        <button
+          class="add-to-cart btn btn-primary"
+          data-name="Product 6"
+          data-price="5.00"
+          onclick="checkLogin()"
+        >
+          Thêm vào giỏ hàng
+        </button>
+      </div>
+      <div class="product">
+        <img
+          src="https://trenboong.vn/wp-content/uploads/2022/08/Doflamingo-01-500x500.jpeg"
+          alt="Product 6"
+        />
+        <div class="product-name">Product 6</div>
+        <div class="product-price">$23.00</div>
+        <button
+          class="add-to-cart btn btn-primary"
+          data-name="Product 7"
+          data-price="23.00"
+          onclick="checkLogin()"
+        >
+          Thêm vào giỏ hàng
+        </button>
+      </div>
+      <div class="product">
+        <img
+          src="https://otakustore.vn/image/cache/catalog/2023/04/vtuber-hanazono-serena-hanazono-serena-1-7-anigift-750x750w.jpg"
+          alt="Product 7"
+        />
+        <div class="product-name">Product 6</div>
+        <div class="product-price">$27.00</div>
+        <button
+          class="add-to-cart btn btn-primary"
+          data-name="Product 8"
+          data-price="27.00"
+          onclick="checkLogin()"
+        >
+          Thêm vào giỏ hàng
+        </button>
+      </div>
+    </div>
+    <div class="cart">
+      <h2>Shopping Cart</h2>
+      <div class="cart-items"></div>
+      <hr />
+      <div class="cart-total">Total: $0.00</div>
+      <button class="thanhToan btn btn-primary">Mua</button>
+    </div>
+
+    <footer>
+      <div class="footer">
+       
+      </div>
+    </footer>
+  </body>
+</html>

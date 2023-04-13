@@ -1,0 +1,279 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    padding: 0px;
+    margin: 0px;
+    box-sizing: border-box;
+    background-image: url(https://kaleoz-media.seagmcdn.com/kaleoz-store/202212/oss-f06d1f9e8f3662bed015015371d22e9e.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .container {
+    margin: 0px auto;
+    width: 1200px;
+    min-height: 800px;
+  }
+  .header {
+    box-sizing: border-box;
+    padding: 20px;
+    justify-content: space-between;
+    width: 100%;
+    height: 60px;
+    position: relative;
+  }
+ 
+  .input {
+    padding: 4px;
+    background-color: white;
+   float: right;
+    width: 400px;
+    height: 40px;
+    border-radius: 5px;
+    box-sizing: border-box;
+    margin: 0 auto;
+  }
+  .input input {
+    width: 300px;
+    height: 34px;
+    outline: none;
+    border: none;
+  }
+  .menu {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    height: 60px;
+    background-color: rgba(62, 62, 62, 0.5);
+    text-align: center;
+  }
+  .root {
+    list-style: none;
+    text-align: center;
+  }
+  .root > li {
+    list-style: none;
+    display: inline-block;
+  }
+  .root > li > a {
+    text-decoration: none;
+    color: white;
+    margin: 0 15px 0 15px;
+    line-height: 50px;
+    display: inline-block;
+  }
+  .root > li:hover {
+    background-color: black;
+    color: red;
+  }
+  .container .submenu {
+    width: 250px;
+    background-color: rgb(174, 174, 174);
+    min-height: 150px;
+    display: none;
+    position: absolute;
+    z-index: 2;
+  }
+  .submenu > li {
+    list-style: none;
+  }
+  .submenu > li > a {
+    color: black;
+    text-decoration: none;
+    display: block;
+    border-top: 1px solid white;
+    line-height: 50px;
+    text-indent: 10px;
+  }
+  .root > li:hover .submenu {
+    display: block;
+  }
+  .submenu > li > a:hover {
+    background-color: black;
+    color: red;
+  }
+  .sanphams {
+    width: 70%;
+    height: 600px;
+    margin: 0px auto;
+    padding: 20px;
+    background-color: rgba(244, 210, 255, 0.7);
+    text-align: center;
+  }
+  .sanpham-parent {
+    background-image: url(https://images7.alphacoders.com/116/1161810.jpg) ;
+     background-position: center center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 800px;
+    height: 450px;
+  }
+  .selects {
+    display: grid;
+  }
+  #pre {
+    height: 50px;
+  }
+  #next {
+    height: 50px;
+  }
+  .sanpham-child {
+    margin: 0 auto;
+    width: 800px;
+    height: 150px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+  .sanphams-1 {
+    position: relative;
+    height: 450px;
+  }
+  
+  .sanpham-child img {
+    margin-top: 20px;
+    width: 195px;
+    height: 130px;
+    background-image: linear-gradient(
+      -45deg,
+      rgba(0, 0, 0, 0.5),
+      rgb(255, 255, 255, 0.5)
+    );
+    border-radius: 5px;
+  }
+  .sanpham-child img:hover {
+    border: 2px rgb(255, 255, 255) solid;
+  }
+  
+  .header .icon1 {
+    font-size: 30px;
+  }
+  .header .icon2 {
+    font-size: 30px;
+    float: right;
+  }
+  .fa-cart-shopping {
+    color: yellow;
+  }
+  .fa-solid {
+    color: rgba(0, 0, 0, 0.5);
+    font-size: 40px;
+    position: absolute;
+  }
+  .fa-angle-left {
+    top: 200px;
+  }
+  .fa-angle-right {
+    top: 200px;
+    right: 20px;
+  }
+  
+  .icon:hover {
+    border: solid white 3px;
+  }
+  .container2 {
+    background-color: rgba(255, 245, 233, 0.9);
+    margin: 5px auto;
+    width: 1200px;
+    min-height: 800px;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding: 50px;
+    box-sizing: border-box;
+    border-radius: 5px;
+  }
+  .product {
+    transition: transform 0.3s ease-in-out;
+    width: 200px;
+    height: 300px;
+    background-color: rgb(255, 185, 131);
+    margin-top: 10px;
+    text-align: center;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.7);
+  }
+  .product img {
+    width: 195px;
+    height: 220PX;
+    object-fit: cover;
+  }
+  .product:hover {
+    transform: scale(1.05);
+  }
+  
+  .product button {
+    margin: 0px auto;
+    display: none;
+  }
+  .cart {
+    text-align: center;
+    width: 1200px;
+    max-height: 500px;
+    background-color: white;
+    border: 2px solid black;
+    margin: 0px auto;
+  }
+  .sale {
+    width: 200px;
+    height: 50px;
+    background-color: rgb(255, 167, 99);
+    margin-left: 250px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-align: center;
+    padding: 5px;
+    font-size: 20px;
+    color: rgba(0, 12, 82, 0.9);
+    border: solid whitesmoke 3px;
+  }
+  #countdown {
+    font-size: 22px;
+    color: red;
+  }
+  .footer {
+    padding: 20px;
+    margin: 0 auto;
+    width: 1200px;
+    height: 400px;
+    background-color: antiquewhite;
+    display: flex;
+    justify-content: space-around;
+    box-sizing: border-box;
+  }
+  /* Style cho modal */
+  #login-modal {
+      display: none;
+      position: fixed; 
+      z-index: 1; 
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto; /* Cho phép scroll khi modal quá dài */
+      background-color: rgba(0, 0, 0, 0.4); 
+    }
+    
+    .modal-content {
+      background-color: #fefefe; /* Màu nền */
+      margin: 15% auto; /* Cho phép căn giữa nội dung */
+      padding: 20px;
+      border: 1px solid #888;
+      width: 30%; /* Chiều rộng của modal */
+    }
+    
+    /* Style cho nút đóng modal */
+    .close {
+      color: #aaa;
+      float: right;
+      font-size: 28px;
+      font-weight: bold;
+    }
+    
+    .close:hover, .close:focus {
+      color: black;
+      text-decoration: none;
+      cursor: pointer;
+    }
+    .product  .product-price:hover{
+      color: red;
+    }
+  
+    
+  
